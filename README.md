@@ -10,11 +10,11 @@ So basically this is a simple offline english to hindi transliteration tool.
 
 ## How to use ##
 
-* For Backend-source use makefile to compile and run it using 
+* For Backend-source use makefile to compile and run it using <p>
 $./translpsl "Meraa Bhaarat Mahaan"
 * You can also install this tool using romadeva_0.0.33-1_amd64.deb, to test it out
 
 ## Disclaimer ##
 
-This is a really old code(and I don't maintain it now), I have just moved the repositories from https://code.google.com/p/romadeva to GitHub.
+This is a really old code(and I don't maintain it now), I have just moved the repositories from https://code.google.com/p/romadeva to GitHub.<p>
 On Google codes it was downloaded more than 1300 times(just bragging).
