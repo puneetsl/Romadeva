@@ -17,4 +17,4 @@ $./translpsl "Meraa Bhaarat Mahaan"
 ## Disclaimer ##
 
 This is a really old code(and I don't maintain it now), I have just moved the repositories from https://code.google.com/p/romadeva to GitHub.<p>
-On Google codes it was downloaded more than 1300 times(just bragging).
+On Google codes it was downloaded more than 1300 times(just bragging). Also that this project is listed in Gambas official application repositories here: http://gambasdoc.org/help/app
