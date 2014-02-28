@@ -1,8 +1,7 @@
 Romadeva
 ========
 
-It is a simple tool to convert Roman script to indic(Devanagari) script. As most Keyboards are English and to write in Indic script is difficult. It is easy to write Hindi in roman script this gives inspiration to make a tool for Linux to write hindi text easily
-So basically this is a simple offline english to hindi transliteration tool.
+It is a simple rule based transliteration tool to convert Roman script to indic(Devanagari) script. As most Keyboards are English and to write in Indic script is difficult. It is easy to write Hindi in roman script this gives inspiration to make a tool for Linux to write hindi text easily
 
 ## Requirements ##
 * For Backend-source you would need only gcc compiler and support for unicodes
