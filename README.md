@@ -11,8 +11,9 @@ It is a simple rule based transliteration tool to convert Roman script to indic(
 ## How to use ##
 
 * For Backend-source use makefile to compile and run it using <p>
-$./translpsl "Meraa Bhaarat Mahaan"
-* You can also install this tool using romadeva_0.0.33-1_amd64.deb, to test it out
+$./translpsl "Meraa Bhaarat Mahaan"<p> 
+Output: मेरा भारत महान
+* You can also install this tool using romadeva_0.0.33-1_amd64.deb (only for 64 bit systems), to test it out
 
 ## Disclaimer ##
 
