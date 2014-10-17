@@ -15,28 +15,22 @@ Copyright (C) 2009 Puneet Singh
 #include<stdlib.h>
 #include<string.h>
 #include"trans.h"
-//#include"parsers.h" 
-//parser.h is now not used with this program but can be used in future
+
 int main(int a,char *b[])
 {
 	FILE *f;
-	char *c;
+	char *c;//Read whole file and put the text in this string
 	
 	setlocale(LC_CTYPE, "");
 	if(a==3)
 	{
-		
-				
-				f=fopen(b[2],"r");
-				c=readfilestr(f);
-				setlocale(LC_CTYPE, "");
-				retWord(c);
-			
-		
+		f=fopen(b[2],"r");
+		c=readfilestr(f);
+		setlocale(LC_CTYPE, "");
+		retWord(c);
 	}
 	else if(a==2)
 	{
-		
 		if(strcmp("-f",b[1])==0)
 		printf("\n%s: no file as input\n",b[0]);
 		setlocale(LC_CTYPE, "");
