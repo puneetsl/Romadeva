@@ -51,199 +51,171 @@ int isconsonent(char verify)
 }// will return 0 if charachter in wovel else 1
 int swar(char a,char b)
 {
-	if(a=='a')
+	switch(a)
 	{
-		if(b=='a')
-		{
-			printf("%lc",retIndicChar(6));//aa
-			return 1;
-		}
-		if(b=='e')
-		{
-			printf("%lc",retIndicChar(5));//a
+		case: 'a'
+			switch(b)
+			{
+				case: 'a'
+					printf("%lc",retIndicChar(6));//aa
+					return 1;
+				case: 'e'
+					printf("%lc",retIndicChar(5));//a
+					return 0;
+				case: 'i'
+					printf("%lc",retIndicChar(16));//ai
+					return 1;
+				case: 'o'
+					printf("%lc",retIndicChar(5));//a
+					return 0;				
+				case: 'u'
+					printf("%lc",retIndicChar(20));//au
+					return 1;
+				case: 0
+					printf("%lc",retIndicChar(5));//a
+					return 1;
+			}
+			break;
+		case: 'e'
+			switch(b)
+			{
+				case: 0
+					printf("%lc",retIndicChar(15));//e
+					return 1;
+				case: 'e'
+					printf("%lc",retIndicChar(8));//ee
+					return 1;
+				case: 'a' case: 'i' case: 'o' case: 'u'
+					printf("%lc",retIndicChar(15));//e
+					return 0;
+			}
+			break;
+		case: 'i'
+			switch(b)
+			{
+				case: 0
+					printf("%lc",retIndicChar(7));//i
+					return 1;
+				case: 'e'
+					printf("%lc",retIndicChar(8));//ii
+					return 1;
+				case: 'a' case: 'e' case: 'o' case: 'u'
+					printf("%lc",retIndicChar(7));//i
+					return 0;
+			}
+			break;
+		case: 'o'
+			switch(b)
+			{
+				case: 0
+					printf("%lc",retIndicChar(19));//o
+					return 1;
+				case: 'e'
+					printf("%lc",retIndicChar(10));//oo
+					return 1;
+				case: 'a' case: 'i' case: 'e' case: 'u'
+					printf("%lc",retIndicChar(19));//o
+					return 0;
+			}
+			break;
+		case: 'u'
+			switch(b)
+			{
+				case: 0
+					printf("%lc",retIndicChar(9));//u
+					return 1;
+				case: 'e'
+					printf("%lc",retIndicChar(10));//uu
+					return 1;
+				case: 'a' case: 'i' case: 'o' case: 'e'
+					printf("%lc",retIndicChar(9));//u
+					return 0;
+			}
+			break;
+		default:
 			return 0;
-		}
-		if(b=='i')
-		{
-			printf("%lc",retIndicChar(16));//ai
-			return 1;
-		}
-		if(b=='o')
-		{
-			printf("%lc",retIndicChar(5));//a
-			return 0;				
-		}
-		if(b=='u')
-		{
-			printf("%lc",retIndicChar(20));//au
-			return 1;
-		}
-		if(b==0)
-		{
-			printf("%lc",retIndicChar(5));//a
-			return 1;
-		}
-	}
-	if(a=='e')
-	{
-		if(b==0)
-		{
-			printf("%lc",retIndicChar(15));//e
-			return 1;
-		}
-		if(b=='e')
-		{
-			printf("%lc",retIndicChar(8));//ee
-			return 1;
-		}
-		printf("%lc",retIndicChar(15));//e
-		if(b=='a'||b=='i'||b=='o'||b=='u')
-		return 0;
-	}
-	if(a=='i')
-	{
-		if(b==0)
-		{
-			printf("%lc",retIndicChar(7));//i
-			return 1;
-		}
-		if(b=='i')
-		{
-			printf("%lc",retIndicChar(8));//ii
-			return 1;
-		}
-		printf("%lc",retIndicChar(7));
-		if(b=='a'||b=='e'||b=='o'||b=='u')
-		return 0;
-	}
-	if(a=='o')
-	{
-		if(b==0)
-		{
-			printf("%lc",retIndicChar(19));//o
-			return 1;
-		}
-		if(b=='o')
-		{
-			printf("%lc",retIndicChar(10));//oo
-			return 1;
-		}
-		printf("%lc",retIndicChar(19));//i
-		if(b=='a'||b=='i'||b=='e'||b=='u')
-		return 0;
-	}
-	if(a=='u')
-	{
-		if(b==0)
-		{
-			printf("%lc",retIndicChar(9));//u
-			return 1;
-		}
-		if(b=='u')
-		{
-			printf("%lc",retIndicChar(10));//uu
-			return 1;
-		}
-		printf("%lc",retIndicChar(9));//u
-		if(b=='a'||b=='i'||b=='o'||b=='e')
-		return 0;
 	}
 	return 0;
 }
 int wovel(char a,char b)
 {
-	if(a=='a')
+	switch(a)
 	{
-		if(b=='a')
-		{
-			printf("%lc",retIndicChar(62));//aa
-			return 1;
-		}
-		if(b=='e')
-		{
-			return 0;
-		}
-		if(b=='i')
-		{
-			printf("%lc",retIndicChar(72));//ai
-			return 1;
-		}
-		if(b=='o')
-		{
-			return 0;				
-		}
-		if(b=='u')
-		{
-			printf("%lc",retIndicChar(76));//au
-			return 1;
-		}
-		if(b==0)
-		return 1;
+		case: 'a'
+			switch(b)
+			{
+				case: 'a'
+					printf("%lc",retIndicChar(62));//aa
+					return 1;
+				case: 'e'
+					return 0;
+				case: 'i'
+					printf("%lc",retIndicChar(72));//ai
+					return 1;
+				case: 'o'
+					return 0;				
+				case: 'u'
+					printf("%lc",retIndicChar(76));//au
+					return 1;
+				case: 0
+					return 1;
+				default:
+					return 1;
+			}
+		case: 'e'
+			switch(b)
+			{
+				case: 0
+					printf("%lc",retIndicChar(71));//e
+					return 1;
+				case: 'e'
+					printf("%lc",retIndicChar(64));//ee
+					return 1;
+				case: 'a' case: 'i' case: 'o' case: 'u'
+					printf("%lc",retIndicChar(71));//e
+					return 0;
+			}
+		case: 'i'
+			switch(b)
+			{
+				case: 0
+					printf("%lc",retIndicChar(63));//i
+					return 1;
+				case: 'i'
+					printf("%lc",retIndicChar(64));//ii
+					return 1;
+				case: 'a' case: 'e' case: 'o' case: 'u'
+					printf("%lc",retIndicChar(63));
+					return 0;
+			}
+		case: 'o'
+			switch(b)
+			{
+				case: 0
+					printf("%lc",retIndicChar(75));//o
+					return 1;
+				case: 'o'
+					printf("%lc",retIndicChar(66));//oo
+					return 1;
+				case: 'a' case: 'i' case: 'e' case: 'u'
+					printf("%lc",retIndicChar(75));//o
+					return 0;
+			}
+		case: 'u'
+			switch(b)
+			{
+				case: 0
+					printf("%lc",retIndicChar(65));//u
+					return 1;
+				case: 'u'
+					printf("%lc",retIndicChar(66));//uu
+					return 1;
+				case: 'a' case: 'i' case: 'o' case: 'e'
+					printf("%lc",retIndicChar(65));//u
+					return 0;
+			}
 	}
-	if(a=='e')
-	{
-		if(b==0)
-		{
-			printf("%lc",retIndicChar(71));//e
-			return 1;
-		}
-		if(b=='e')
-		{
-			printf("%lc",retIndicChar(64));//ee
-			return 1;
-		}
-		printf("%lc",retIndicChar(71));//e
-		if(b=='a'||b=='i'||b=='o'||b=='u')
-		return 0;
-	}
-	if(a=='i')
-	{
-		if(b==0)
-		{
-			printf("%lc",retIndicChar(63));//i
-			return 1;
-		}
-		if(b=='i')
-		{
-			printf("%lc",retIndicChar(64));//ii
-			return 1;
-		}
-		printf("%lc",retIndicChar(63));
-		if(b=='a'||b=='e'||b=='o'||b=='u')
-		return 0;
-	}
-	if(a=='o')
-	{
-		if(b==0)
-		{
-			printf("%lc",retIndicChar(75));//o
-			return 1;
-		}
-		if(b=='o')
-		{
-			printf("%lc",retIndicChar(66));//oo
-			return 1;
-		}
-		printf("%lc",retIndicChar(75));//o
-		if(b=='a'||b=='i'||b=='e'||b=='u')
-		return 0;
-	}
-	if(a=='u')
-	{
-		if(b==0)
-		{
-			printf("%lc",retIndicChar(65));//u
-			return 1;
-		}
-		if(b=='u')
-		{
-			printf("%lc",retIndicChar(66));//uu
-			return 1;
-		}
-		printf("%lc",retIndicChar(65));//u
-		if(b=='a'||b=='i'||b=='o'||b=='e')
-		return 0;
-	}
+}
 return 0;
 }
 int extra(char c)
