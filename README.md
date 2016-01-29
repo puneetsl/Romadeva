@@ -1,6 +1,7 @@
 Romadeva
 ========
 
+![](https://storage.googleapis.com/google-code-archive/v2/code.google.com/romadeva/logo.png)
 
 It is a simple rule based transliteration tool to convert Roman script to indic(Devanagari) script. As most Keyboards are English and to write in Indic script is difficult. It is easy to write Hindi in roman script this gives inspiration to make a tool for Linux to write hindi text easily
 
@@ -11,7 +12,7 @@ It is a simple rule based transliteration tool to convert Roman script to indic(
 ## How to use ##
 
 * For Backend-source use makefile to compile and run it using <p>
-$./translpsl "Meraa Bhaarat Mahaan"<p> 
+$./translpsl "Meraa Bhaarat Mahaan"<p>
 Output: मेरा भारत महान
 * You can also install this tool using romadeva_0.0.33-1_amd64.deb (only for 64 bit systems), to test it out
 
