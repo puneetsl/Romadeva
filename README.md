@@ -1,7 +1,7 @@
-Romadeva
+![](res/logo.png) Romadeva
 ========
 
-![](res/logo.png)
+
 
 It is a simple rule based transliteration tool to convert Roman script to indic(Devanagari) script. As most Keyboards are English and to write in Indic script is difficult. It is easy to write Hindi in roman script this gives inspiration to make a tool for Linux to write hindi text easily
 
