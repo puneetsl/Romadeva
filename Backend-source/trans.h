@@ -53,81 +53,81 @@ int swar(char a,char b)
 {
 	switch(a)
 	{
-		case: 'a'
+		case 'a':
 			switch(b)
 			{
-				case: 'a'
+				case 'a':
 					printf("%lc",retIndicChar(6));//aa
 					return 1;
-				case: 'e'
+				case 'e':
 					printf("%lc",retIndicChar(5));//a
 					return 0;
-				case: 'i'
+				case 'i':
 					printf("%lc",retIndicChar(16));//ai
 					return 1;
-				case: 'o'
+				case 'o':
 					printf("%lc",retIndicChar(5));//a
 					return 0;				
-				case: 'u'
+				case 'u':
 					printf("%lc",retIndicChar(20));//au
 					return 1;
-				case: 0
+				case 0:
 					printf("%lc",retIndicChar(5));//a
 					return 1;
 			}
 			break;
-		case: 'e'
+		case 'e':
 			switch(b)
 			{
-				case: 0
+				case 0:
 					printf("%lc",retIndicChar(15));//e
 					return 1;
-				case: 'e'
+				case 'e':
 					printf("%lc",retIndicChar(8));//ee
 					return 1;
-				case: 'a' case: 'i' case: 'o' case: 'u'
+				case 'a': case 'i': case 'o': case 'u':
 					printf("%lc",retIndicChar(15));//e
 					return 0;
 			}
 			break;
-		case: 'i'
+		case 'i':
 			switch(b)
 			{
-				case: 0
+				case 0:
 					printf("%lc",retIndicChar(7));//i
 					return 1;
-				case: 'e'
+				case 'e':
 					printf("%lc",retIndicChar(8));//ii
 					return 1;
-				case: 'a' case: 'e' case: 'o' case: 'u'
+				case 'a': case: 'e' case: 'o' case: 'u':
 					printf("%lc",retIndicChar(7));//i
 					return 0;
 			}
 			break;
-		case: 'o'
+		case 'o':
 			switch(b)
 			{
-				case: 0
+				case 0:
 					printf("%lc",retIndicChar(19));//o
 					return 1;
-				case: 'e'
+				case 'e':
 					printf("%lc",retIndicChar(10));//oo
 					return 1;
-				case: 'a' case: 'i' case: 'e' case: 'u'
+				case 'a' case: 'i' case: 'e' case: 'u':
 					printf("%lc",retIndicChar(19));//o
 					return 0;
 			}
 			break;
-		case: 'u'
+		case 'u':
 			switch(b)
 			{
-				case: 0
+				case 0:
 					printf("%lc",retIndicChar(9));//u
 					return 1;
-				case: 'e'
+				case 'e':
 					printf("%lc",retIndicChar(10));//uu
 					return 1;
-				case: 'a' case: 'i' case: 'o' case: 'e'
+				case 'a': case 'i': case 'o': case: 'e':
 					printf("%lc",retIndicChar(9));//u
 					return 0;
 			}
@@ -141,76 +141,76 @@ int wovel(char a,char b)
 {
 	switch(a)
 	{
-		case: 'a'
+		case 'a':
 			switch(b)
 			{
-				case: 'a'
+				case 'a':
 					printf("%lc",retIndicChar(62));//aa
 					return 1;
-				case: 'e'
+				case 'e':
 					return 0;
-				case: 'i'
+				case 'i':
 					printf("%lc",retIndicChar(72));//ai
 					return 1;
-				case: 'o'
+				case 'o':
 					return 0;				
-				case: 'u'
+				case 'u':
 					printf("%lc",retIndicChar(76));//au
 					return 1;
-				case: 0
+				case 0:
 					return 1;
 				default:
 					return 1;
 			}
-		case: 'e'
+		case 'e':
 			switch(b)
 			{
-				case: 0
+				case 0:
 					printf("%lc",retIndicChar(71));//e
 					return 1;
-				case: 'e'
+				case 'e':
 					printf("%lc",retIndicChar(64));//ee
 					return 1;
-				case: 'a' case: 'i' case: 'o' case: 'u'
+				case 'a': case 'i': case 'o': case 'u':
 					printf("%lc",retIndicChar(71));//e
 					return 0;
 			}
-		case: 'i'
+		case 'i':
 			switch(b)
 			{
-				case: 0
+				case 0:
 					printf("%lc",retIndicChar(63));//i
 					return 1;
-				case: 'i'
+				case 'i':
 					printf("%lc",retIndicChar(64));//ii
 					return 1;
-				case: 'a' case: 'e' case: 'o' case: 'u'
+				case 'a': case 'e': case 'o': case 'u':
 					printf("%lc",retIndicChar(63));
 					return 0;
 			}
-		case: 'o'
+		case 'o':
 			switch(b)
 			{
-				case: 0
+				case 0:
 					printf("%lc",retIndicChar(75));//o
 					return 1;
-				case: 'o'
+				case 'o':
 					printf("%lc",retIndicChar(66));//oo
 					return 1;
-				case: 'a' case: 'i' case: 'e' case: 'u'
+				case 'a': case 'i': case 'e': case 'u':
 					printf("%lc",retIndicChar(75));//o
 					return 0;
 			}
-		case: 'u'
+		case 'u':
 			switch(b)
 			{
-				case: 0
+				case: 0:
 					printf("%lc",retIndicChar(65));//u
 					return 1;
-				case: 'u'
+				case 'u':
 					printf("%lc",retIndicChar(66));//uu
 					return 1;
-				case: 'a' case: 'i' case: 'o' case: 'e'
+				case 'a': case 'i': case 'o': case 'e':
 					printf("%lc",retIndicChar(65));//u
 					return 0;
 			}
