@@ -99,7 +99,7 @@ int swar(char a,char b)
 				case 'e':
 					printf("%lc",retIndicChar(8));//ii
 					return 1;
-				case 'a': case: 'e' case: 'o' case: 'u':
+				case 'a': case 'e': case 'o': case 'u':
 					printf("%lc",retIndicChar(7));//i
 					return 0;
 			}
@@ -113,7 +113,7 @@ int swar(char a,char b)
 				case 'e':
 					printf("%lc",retIndicChar(10));//oo
 					return 1;
-				case 'a' case: 'i' case: 'e' case: 'u':
+				case 'a': case 'i': case 'e': case 'u':
 					printf("%lc",retIndicChar(19));//o
 					return 0;
 			}
@@ -127,7 +127,7 @@ int swar(char a,char b)
 				case 'e':
 					printf("%lc",retIndicChar(10));//uu
 					return 1;
-				case 'a': case 'i': case 'o': case: 'e':
+				case 'a': case 'i': case 'o': case 'e':
 					printf("%lc",retIndicChar(9));//u
 					return 0;
 			}
@@ -204,7 +204,7 @@ int wovel(char a,char b)
 		case 'u':
 			switch(b)
 			{
-				case: 0:
+				case 0:
 					printf("%lc",retIndicChar(65));//u
 					return 1;
 				case 'u':
