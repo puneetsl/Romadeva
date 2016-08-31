@@ -1,0 +1,22 @@
+# Gambas Project File 2.0
+# Compiled with Gambas 2.23.1
+Title=Romadeva
+Startup=FMain
+Icon=romadeva.png
+Version=0.0.36
+Library=gb.gui
+Library=gb.form
+Description=A simple Hindi(devanagri) transliterator which converts Roman text to Devanagri.\nDocumentation pending\n\nNote: This is Just Alpha version. Contribute to rewrite a robust backend so that we can make it to support more languages.
+Authors=Puneet Singh (everlasting.puneet@gmail.com)
+TabSize=2
+ExecPath=/home/puneet/Development/Romadeva.gambas
+Maintainer=Puneet Singh
+Vendor=Puneet
+Address=everlasting.puneet@gmail.com
+Url=http://code.google.com/p/romadeva/
+License=General Public Licence
+UseRelease=1
+Systems=ubuntu
+Menus=Applications/Text
+Categories=TextTools
+Groups=text

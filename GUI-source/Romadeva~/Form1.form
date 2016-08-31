@@ -1,0 +1,32 @@
+# Gambas Form File 2.0
+
+{ Form Form
+  MoveScaled(0,0,67,29)
+  Background = &H3B3C38&
+  Text = ("")
+  { TextLabel1 TextLabel
+    MoveScaled(13,1,35,6)
+    Font = Font["Bold,+6"]
+    Background = &H3B3C38&
+    Foreground = Color.TextBackground
+    Text = ("Romadeva (beta)")
+  }
+  { Label1 Label
+    MoveScaled(2,22,36,3)
+    Background = &H3B3C38&
+    Foreground = Color.TextBackground
+    Text = ("Author: Puneet Singh")
+  }
+  { TextArea1 TextArea
+    MoveScaled(2,10,62,9)
+    Background = Color.ButtonBackground
+    Text = ("Licence: GPL V3\nProject homepage: http://code.google.com/p/romadeva/\n")
+    ReadOnly = True
+  }
+  { Label2 Label
+    MoveScaled(48,1,6,2)
+    Background = &H3B3C38&
+    Foreground = Color.TextBackground
+    Text = ("0.0.33")
+  }
+}

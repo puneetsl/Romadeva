@@ -1,0 +1,229 @@
+' Gambas class file
+PUBLIC temp1 AS String
+PUBLIC flag AS Integer = 0
+PUBLIC tarr AS String[]
+PUBLIC stri AS String
+PUBLIC oldlength AS Integer = 1
+PUBLIC mode AS String = "Hindi(Devanagri)"
+PUBLIC SUB _new()
+
+END
+
+PUBLIC SUB Form_Open()
+  IF NOT Exist("/usr/bin/translpsl")
+  Message("Beckend Package not found: translpsl\nPlease compile and install the source using \"sudo make\" command")
+  QUIT
+  ENDIF
+  IF NOT Exist(User.home & "/.config/romadeva/")
+  MKDIR (User.home & "/.config/romadeva/")
+  ENDIF
+  IF NOT Exist(User.home & "/.config/romadeva/transdbase")
+  
+  File.Save(User.home & "/.config/romadeva/transdbase", "om;<om>=")
+  ENDIF
+  stri = File.Load(User.home & "/.config/romadeva/transdbase")
+  tarr = Split(stri, "=")
+  Label5.Text = "Current mode: " & mode
+END
+
+PUBLIC SUB Button1_Click()
+   DIM str1 AS String
+   Dialog.path = User.Home & "/*"
+   IF Dialog.SaveFile() THEN RETURN
+    str1 = Dialog.Path
+   File.Save(str1, TextArea1.Text)
+END
+PUBLIC SUB strExistsInDbase(stra AS String) AS Integer
+ DIM tstr AS String
+ DIM trr AS String[]
+ DIM srt AS String
+
+
+  FOR EACH tstr IN tarr
+    trr = Split(tstr, ";")
+    IF tstr = ""
+    ELSE
+    IF trr[0] = Lower$(temp1)
+      SHELL "translpsl \"" & trr[1] & "\"" WAIT TO srt
+      ListBox1.Add(srt)
+    ENDIF
+  ENDIF
+  NEXT
+  IF trr.Length = 0
+  RETURN 0
+  ELSE
+  RETURN 1
+  ENDIF
+
+END
+PUBLIC SUB TextArea1_KeyRelease()
+  DIM text AS String
+  DIM tempi AS String
+  DIM strtemp AS String
+  DIM laststr AS String
+  DIM out AS String
+  DIM i AS Integer
+  DIM strary AS String[]
+  DIM aray AS String[]
+  IF Key.code = 103 AND flag = 1
+    Button4_Click()
+    flag = 1
+    ELSE
+    flag = 0
+  ENDIF
+  
+  
+  IF Key.Code = Key.Space OR Key.code = Key.Tab OR Key.code = Key.Return AND mode = "Hindi(Devanagri)"
+    aray = tarr
+    text = TextArea1.Text
+    strary = Split(text, "\n\t " & Chr$(13))
+    laststr = strary[strary.Length - 2]
+    temp1 = laststr
+      IF Asc(Left$(laststr)) = 13
+       laststr = Mid$(laststr, 2, Len(laststr))
+      ENDIF
+      SHELL "translpsl \"" & laststr & "\"" WAIT TO out
+      ListBox1.Add(out)
+      strExistsInDbase(laststr)
+      TextArea1.text = Mid(text, 1, - (Len(laststr) + 1))
+      TextArea1.Pos = TextArea1.Length
+      TextArea1.Text = TextArea1.Text & listbox1.List[listbox1.List.Length - 1] & Key.Text
+      IF Key.code = Key.Tab
+       TextArea1.Text = TextArea1.Text & "\t"
+      ENDIF
+      oldlength = Len(TextArea1.Text) + 1
+      'PRINT oldlength
+      IF Asc(Right$(laststr)) = 13 OR Asc(Right$(laststr)) > 122 OR Asc(Right$(laststr)) < 47
+      ELSE
+        TextBox1.Text = laststr
+        TextBox3.Text = out
+      ENDIF
+    ELSE
+    
+    listbox1.Clear
+    ENDIF
+   IF laststr = ""
+   listbox1.Clear
+  ENDIF
+  IF mode = "Hindi(Devanagri)"
+  SHELL "translpsl \"" & Mid$(TextArea1.text, oldlength, Len(TextArea1.text)) & "\"" WAIT TO TextBox5.Text
+  ENDIF
+END
+
+
+PUBLIC SUB Button2_Click()
+  DIM str1 AS String
+  Dialog.Title = "Open"
+  Dialog.path = User.Home & "/ "
+  IF Dialog.SaveFile() THEN RETURN
+    str1 = Dialog.Path
+  TextArea1.Text = File.Load(str1)
+  
+END
+
+PUBLIC SUB listbox1_DblClick()
+  DIM stary AS String[]
+  DIM lastst AS String
+  DIM te AS String
+  'TextArea1.Text = Conv$(TextArea1.Text, "ISO8859-1", "ISO-8859-1")
+  te = Right$(TextArea1.Text)
+  stary = Split(TextArea1.text, "\n\t " & Chr$(13), "")
+  IF stary.Length > 1
+  lastst = stary[stary.Length - 2]
+  ELSE
+  lastst = stary[stary.Length - 1]
+  ENDIF
+  TextArea1.text = Mid(TextArea1.text, 1, - (Len(lastst) + 1))
+  TextArea1.Text = TextArea1.Text & ListBox1.Current.Text & te
+  TextArea1.SetFocus
+END
+PUBLIC SUB changeWhileInsert()
+  DIM stary AS String[]
+  DIM lastst AS String
+  DIM te AS String
+  'TextArea1.Text = Conv$(TextArea1.Text, "ISO8859-1", "ISO-8859-1")
+  te = Right$(TextArea1.Text)
+  stary = Split(TextArea1.text, "\n\t " & Chr$(13), "")
+  IF stary.Length > 1
+  lastst = stary[stary.Length - 2]
+  ELSE
+  lastst = stary[stary.Length - 1]
+  ENDIF
+  TextArea1.text = Mid(TextArea1.text, 1, - (Len(lastst) + 1))
+  TextArea1.Text = TextArea1.Text & TextBox4.Text & te
+  TextArea1.SetFocus
+END
+  PUBLIC SUB Button3_Click()
+  DIM str1 AS String
+  DIM arr AS String[]
+  DIM arr1 AS String[]
+  DIM i AS Integer
+  str1 = File.Load(User.home & "/.config/romadeva/transdbase")
+  IF NOT (TextBox1.Text = "") AND NOT (TextBox2.Text = "")
+   str1 = Trim(str1) & Trim(Lower$(TextBox1.Text)) & ";" & Trim(Lower$(TextBox2.Text)) & "="
+   File.Save(User.home & "/.config/romadeva/transdbase", str1)
+  ENDIF
+  stri = File.Load(User.home & "/.config/romadeva/transdbase")
+  tarr = Split(stri, "=")
+  changeWhileInsert()
+  strExistsInDbase(TextBox1.Text)
+  TextArea1.SetFocus
+  TextBox2.text = ""
+  TextBox4.text = ""
+END
+
+
+
+
+PUBLIC SUB TextBox2_KeyRelease()
+DIM repl AS String
+SHELL "translpsl \"" & TextBox2.text & "\"" WAIT TO repl
+TextBox4.text = repl
+IF Key.Code = Key.Space OR Key.code = Key.Tab OR Key.code = Key.Return
+Message("White paces i.e. space,enter,tab are not allowed!!")
+TextBox4.text = ""
+TextBox2.text = ""
+ENDIF
+END
+PUBLIC SUB Button4_Enter()
+Button4.Foreground = Color.ButtonForeground
+END
+PUBLIC SUB Button4_Leave()
+Button4.Foreground = Color.ButtonBackground
+END
+
+PUBLIC SUB Button4_Click()
+
+  IF mode = "Hindi(Devanagri)"
+  mode = "English(Roman)"
+  ELSE
+  mode = "Hindi(Devanagri)"
+  ENDIF
+Label5.Text = "Current mode: " & mode
+TextArea1.SetFocus
+IF mode = "English(Roman)"
+TextBox5.Hide
+ELSE
+TextBox5.Show
+ENDIF
+END
+
+PUBLIC SUB TextArea1_KeyPress()
+    IF Key.code = 65507 'ctrl
+      flag = 1
+    ENDIF
+
+END
+
+PUBLIC SUB Button5_Enter()
+Button5.Foreground = Color.ButtonForeground
+END
+PUBLIC SUB Button5_Leave()
+Button5.Foreground = Color.ButtonBackground
+END
+
+PUBLIC SUB Button5_Click()
+
+  Form1.Show
+
+END

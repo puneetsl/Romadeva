@@ -1,0 +1,99 @@
+# Gambas Form File 3.0
+{ Form Form 
+  MoveScaled(0,0,94,60)
+  ToolTip = ("just write in some english text to have hindi around you")
+  Text = ("Romadeva")
+  Icon = Picture["romadeva.png"]
+  Resizable = False
+  { Panel1 Panel 
+    MoveScaled(0,0,94,8)
+    Background = &H3D3C38&
+  }
+  { TextArea1 TextArea 
+    MoveScaled(2,9,70,37)
+    Expand = True
+  }
+  { Button2 Button 
+    MoveScaled(3,49,11,4)
+    Text = ("open file")
+  }
+  { Button1 Button 
+    MoveScaled(3,54,11,4)
+    Text = ("save to file")
+  }
+  { TextBox1 TextBox 
+    MoveScaled(34,52,21,4)
+    Font = Font["Bold"]
+    ReadOnly = True
+  }
+  { TextBox2 TextBox 
+    MoveScaled(58,52,21,4)
+    Font = Font["Bold"]
+  }
+  { Label1 Label 
+    MoveScaled(34,46,48,4)
+    Text = ("You have a better transliteration ?")
+  }
+  { Label2 Label 
+    MoveScaled(34,49,18,4)
+    Text = ("Original ")
+  }
+  { Label3 Label 
+    MoveScaled(58,49,18,4)
+    Text = ("Transliterate it to")
+  }
+  { Button3 Button 
+    MoveScaled(81,52,8,7)
+    Text = ("Insert")
+  }
+  { ListBox1 ListBox 
+    MoveScaled(74,9,19,37)
+    List = []
+  }
+  { TextBox3 TextBox 
+    MoveScaled(34,56,21,4)
+    Font = Font["Bold"]
+    ReadOnly = True
+  }
+  { TextBox4 TextBox 
+    MoveScaled(58,56,21,4)
+    Font = Font["Bold"]
+    ReadOnly = True
+  }
+  { Button4 Button 
+    MoveScaled(2,0,12,4)
+    Background = &H3D3C38&
+    Foreground = Color.ButtonBackground
+    Text = ("Toggle")
+  }
+  { Label4 Label 
+    MoveScaled(2,3,38,4)
+    Background = &H3D3C38&
+    Foreground = Color.TextBackground
+    Text = ("toggle between english-hindi (press ctrl+g)")
+  }
+  { Label5 Label 
+    MoveScaled(15,0,30,4)
+    Background = &H3D3C38&
+    Foreground = Color.TextBackground
+  }
+  { Button5 Button 
+    MoveScaled(84,0,9,4)
+    Background = &H3D3C38&
+    Foreground = Color.ButtonBackground
+    Text = ("About")
+  }
+  { TextBox5 TextBox 
+    MoveScaled(46,1,27,4)
+    Font = Font["+3"]
+    Background = Color.ButtonBackground
+    ReadOnly = True
+  }
+  { Button6 Button 
+    MoveScaled(74,0,9,4)
+    Enabled = False
+    Background = &H3D3C38&
+    Foreground = Color.ButtonBackground
+    Text = ("Settings")
+  }
+}

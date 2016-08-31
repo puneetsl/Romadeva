@@ -1,0 +1,8 @@
+' Gambas class file
+
+
+Public Sub TextLabel1_MouseDown()
+
+  
+
+End
