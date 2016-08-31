@@ -162,6 +162,7 @@ int wovel(char a,char b)
 				default:
 					return 1;
 			}
+		break;
 		case 'e':
 			switch(b)
 			{
@@ -175,6 +176,7 @@ int wovel(char a,char b)
 					printf("%lc",retIndicChar(71));//e
 					return 0;
 			}
+		break;
 		case 'i':
 			switch(b)
 			{
@@ -188,6 +190,7 @@ int wovel(char a,char b)
 					printf("%lc",retIndicChar(63));
 					return 0;
 			}
+		break;
 		case 'o':
 			switch(b)
 			{
@@ -201,6 +204,7 @@ int wovel(char a,char b)
 					printf("%lc",retIndicChar(75));//o
 					return 0;
 			}
+		break;
 		case 'u':
 			switch(b)
 			{
@@ -214,8 +218,9 @@ int wovel(char a,char b)
 					printf("%lc",retIndicChar(65));//u
 					return 0;
 			}
+		break;
+		
 	}
-}
 return 0;
 }
 int extra(char c)
