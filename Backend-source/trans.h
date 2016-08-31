@@ -96,7 +96,7 @@ int swar(char a,char b)
 				case 0:
 					printf("%lc",retIndicChar(7));//i
 					return 1;
-				case 'e':
+				case 'i':
 					printf("%lc",retIndicChar(8));//ii
 					return 1;
 				case 'a': case 'e': case 'o': case 'u':
@@ -110,7 +110,7 @@ int swar(char a,char b)
 				case 0:
 					printf("%lc",retIndicChar(19));//o
 					return 1;
-				case 'e':
+				case 'o':
 					printf("%lc",retIndicChar(10));//oo
 					return 1;
 				case 'a': case 'i': case 'e': case 'u':
