@@ -124,7 +124,7 @@ int swar(char a,char b)
 				case 0:
 					printf("%lc",retIndicChar(9));//u
 					return 1;
-				case 'e':
+				case 'u':
 					printf("%lc",retIndicChar(10));//uu
 					return 1;
 				case 'a': case 'i': case 'o': case 'e':
